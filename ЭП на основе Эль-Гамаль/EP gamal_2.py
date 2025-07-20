@@ -1,0 +1,102 @@
+def vzlom(A, B):
+    Верхняя_строка = [1, 0, A]
+    Нижняя_строка = [0, 1, B]
+    print (f'\t{Верхняя_строка}')
+    print (f'\t{Нижняя_строка}')
+    
+    while True:
+        if (Верхняя_строка[2] == 1 and Нижняя_строка[2] == 0) or (Верхняя_строка[2] == 0 and Нижняя_строка[2] == 1):
+            break            
+        elif Верхняя_строка[2] < Нижняя_строка[2]:
+            множитель = Нижняя_строка[2] // Верхняя_строка[2]
+            for i in range (0, 3):
+                Нижняя_строка[i] -= (Верхняя_строка[i]*множитель)
+        else:
+            множитель = Верхняя_строка[2] // Нижняя_строка[2]
+            for i in range (0, 3):
+                Верхняя_строка[i] -= (Нижняя_строка[i]*множитель)
+        print ("")
+        print (f'\t{Верхняя_строка}')
+        print (f'\t{Нижняя_строка}')
+    if Верхняя_строка[2] == 1:
+        if Верхняя_строка[0] > 0:
+            return Верхняя_строка[0]
+        else:
+            itog = Верхняя_строка[0]
+            while itog < 0:
+                itog += Нижняя_строка[0]
+            return itog    
+            
+    elif Нижняя_строка[2] == 1:
+        if Нижняя_строка[0] > 0:
+            return Нижняя_строка[0]
+        else:
+            itog = Нижняя_строка[0]
+            while itog < 0:
+                itog += Верхняя_строка[0]
+            return itog   
+
+def Generatsiya(P, alfa, a, r, X):
+    beta = (alfa**a) % P
+    print(f'beta = alfa**a mod P = {alfa}**{a} mod {P} = {beta}')
+    S1 = alfa**r % P
+    print(f'S1 = alfa**r mod P = {alfa}**{r} mod {P} = {S1}')
+    print(f'S2 = ((X - a * S1) * r**(-1)) mod (P - 1)')
+    print(f'\tРасчёт r**-1:')
+    temp = vzlom(r, P - 1) % (P - 1)
+    print(f'\tr**-1 = {temp}')
+    S2 = ((X - a * S1) * temp) % (P - 1)
+    print(f'S2 = (({X} - {a} * {S1}) * {temp}) mod ({P - 1}) = {S2}')
+    print(f'ЭП = (X, S1, S2) = ({X}, {S1}, {S2})')
+    return S1, S2
+
+def Proverka(P, alfa, a, r, X, S1, S2):
+    beta = (alfa**a) % P
+    print(f'\nПроверка ЭП')
+    print(f'Подпись подлинна, если:\n(alfa**X) mod P == ((beta**S1) * (S1**S2)) mod P\n({alfa}**{X}) mod {P} == (({beta}**{S1}) * ({S1}**{S2})) mod {P}')
+    t1 = (alfa**X) % P
+    t2 = ((beta**S1) * (S1**S2)) % P
+    # print(f'{t1} ≷ {t2}')
+    if t1 == t2:
+        print(f'{t1} = {t2}')
+        print(f'ЭП подлинна')
+    else:
+        print(f'{t1} ≠ {t2}')
+        print(f'ЭП не подтверждена')
+
+
+print(f'ЭП Эль-Гамаля')
+FLAG = int(input("Чтобы зашифровать, введите 1;\nЧтобы расшифровать, введите 2;\nчтобы сгенерировать подпись и проверить, введите 3\n-> "))
+if FLAG == 1:
+    P = int(input("Введите значение модуля Р: "))
+    alfa = int(input("Введите значение множества ненулевых вычетов alfa: "))
+    a = int(input("Введите секретный ключ а: "))
+    r = int(input("Введите случайное число r: "))
+    X = int(input("Введите сообщение для подписания: "))
+    t1, t2 = Generatsiya(P, alfa, a, r, X)
+    # P = 11
+    # alfa = 2
+    # a = 8
+    # r = 9
+    # X = 5
+
+
+elif FLAG == 2:
+    P = int(input("Введите значение модуля Р: "))
+    alfa = int(input("Введите значение множества ненулевых вычетов alfa: "))
+    a = int(input("Введите секретный ключ а: "))
+    r = int(input("Введите случайное число r: "))
+    X = int(input("Введите сообщение для подписания: "))
+    S1 = int(input('Введите S1: '))
+    S2 = int(input('Введите S2: '))
+    Proverka(P, alfa, a, r, X, S1, S2)
+elif FLAG == 3:
+    P = int(input("Введите значение модуля Р: "))
+    alfa = int(input("Введите значение множества ненулевых вычетов alfa: "))
+    a = int(input("Введите секретный ключ а: "))
+    r = int(input("Введите случайное число r: "))
+    X = int(input("Введите сообщение для подписания: "))
+    S1, S2 = Generatsiya(P, alfa, a, r, X)
+    Proverka(P, alfa, a, r, X, S1, S2)
+else:
+    print(f'Долбое6, смотри что вводишь')
