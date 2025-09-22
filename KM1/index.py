@@ -87,6 +87,3 @@ for i in range (0, 33):
         print ("Взаимный индекс совпадения 1,3: " + str(Vzaim_1_4))
     sdvig += 1    
     
-
-# for i in betabet:
-#     print(i, " - ", Y4.count(i))
