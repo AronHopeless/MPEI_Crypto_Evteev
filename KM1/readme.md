@@ -73,4 +73,4 @@
   <img src="https://github.com/AronHopeless/MPEI_Crypto_Evteev/blob/main/KM1/imgs/08.jpg" width=750>
 </p>
 
-Образец выполнения работы - [отчёт Word](https://github.com/AronHopeless/MPEI_Crypto_Evteev/blob/main/KM1/_ДЗ_1_Вар3.docx) и [таблица Excel](https://github.com/AronHopeless/MPEI_Crypto_Evteev/blob/main/KM1/_Excel_к_Практ1_КриптЗИ.xlsx) приведставлен в репозитории.
+Образец выполнения работы - [отчёт Word](https://github.com/AronHopeless/MPEI_Crypto_Evteev/blob/main/KM1/_ДЗ_1_Вар3.docx) и [таблица Excel](https://github.com/AronHopeless/MPEI_Crypto_Evteev/blob/main/KM1/_Excel_к_Практ1_КриптЗИ.xlsx) - приведставлен в репозитории.
