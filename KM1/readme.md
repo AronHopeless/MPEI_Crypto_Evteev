@@ -23,7 +23,7 @@
 6. Получен текст в 4 столбца
 
 <p align="left">
-  <img src="https://github.com/AronHopeless/MPEI_Crypto_Evteev/blob/main/KM1/imgs/02.jpg" width=750>
+  <img src="https://github.com/AronHopeless/MPEI_Crypto_Evteev/blob/main/KM1/imgs/02.jpg">
 </p>
 
 Вторая часть вывода программы - подсчёт количества повторений каждого символа алфавита в каждом из столбцов. Необходимо вручную перенести данные в соответствующие ячейки Excel таблицы. Блок таблицы называется "Частота появления букв в каждом столбце".  
@@ -67,4 +67,10 @@
 
 Повторяя данный алгоритм для каждого символа шифртекста, получим исходный текст.  
 Также можно воспользоваться ресурсом [Vigenere Tool](https://www.boxentriq.com/code-breaking/vigenere-cipher) в режиме Custom.  
-Введите шифртекст, установите кастомный алфавит: ```АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ_```
+Введите шифртекст, установите кастомный алфавит: `АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ_`, введите кодовое слово и нажмите `Decode`. Результат расшифровки можно скопировать для отчёта.
+
+<p align="left">
+  <img src="https://github.com/AronHopeless/MPEI_Crypto_Evteev/blob/main/KM1/imgs/08.jpg" width=750>
+</p>
+
+Образец выполнения работы - [отчёт Word](https://github.com/AronHopeless/MPEI_Crypto_Evteev/blob/main/KM1/_ДЗ_1_Вар3.docx) и [таблица Excel](https://github.com/AronHopeless/MPEI_Crypto_Evteev/blob/main/KM1/_Excel_к_Практ1_КриптЗИ.xlsx) приведставлен в репозитории.
