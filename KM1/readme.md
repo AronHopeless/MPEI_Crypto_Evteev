@@ -9,7 +9,7 @@
 Скопируйте свой текст и поместите его в переменную `text`, затем просто запустите программу.  
 
 <p align="left">
-  <img src="https://github.com/AronHopeless/MPEI_Crypto_Evteev/blob/main/KM1/imgs/01.jpg">
+  <img src="https://github.com/AronHopeless/MPEI_Crypto_Evteev/blob/main/KM1/imgs/01.jpg" width=750>
 </p>
 
 Вывод программы разделён на 2 части.  
