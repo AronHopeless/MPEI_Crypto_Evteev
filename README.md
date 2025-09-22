@@ -1,5 +1,4 @@
 # MPEI_Crypto_Evteev
-python programms made to solve cryptography problems
 
 Программы для решения КМов Елисеева по крипте  
 (актуально для учащихся МЭИ на 2024 год)
