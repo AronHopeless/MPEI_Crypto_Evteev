@@ -23,7 +23,7 @@
 6. Получен текст в 4 столбца
 
 <p align="left">
-  <img src="https://github.com/AronHopeless/MPEI_Crypto_Evteev/blob/main/KM1/imgs/02.jpg">
+  <img src="https://github.com/AronHopeless/MPEI_Crypto_Evteev/blob/main/KM1/imgs/02.jpg" width=750>
 </p>
 
 
